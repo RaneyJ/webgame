@@ -1,0 +1,17 @@
+.card {
+    width: 300px; /* Card width */
+    padding: 20px; /* Inner padding */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: white; /* White background */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition on hover */
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
+    cursor: pointer;
+}

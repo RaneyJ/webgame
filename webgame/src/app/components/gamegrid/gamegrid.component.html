@@ -1,0 +1,24 @@
+<div style="padding: 16px;"></div>
+<div class="points-display">
+  Points: {{ points }}
+</div>
+<div class="map" [ngStyle]="{
+  'transform': 'scale(' + zoomLevel + ')',
+  'transform-origin': '0 0',
+  'margin-left': offsetX + 'px',
+  'margin-top': offsetY + 'px'
+}"
+(mousedown)="startDrag($event)"
+(mousemove)="dragMap($event)"
+(mouseup)="stopDrag()"
+(mouseleave)="stopDrag()">
+  <div *ngFor="let row of pixels; let rowIndex = index" class="row">
+    <div
+      *ngFor="let pixel of row; let colIndex = index"
+      class="pixel"
+      [style.backgroundColor]="pixel.color"
+      [class.inactive]="!pixel.isInteractable"
+      (mousedown)="handlePixelMouseDown($event, rowIndex, colIndex)">
+    </div>
+  </div>
+</div>
