@@ -1,7 +1,9 @@
-<p>home works!</p>
-<p>HERE</p>
+<h1>NAME</h1>
+<input [(ngModel)]="selectedName" (change)="savePlayer()">
+
+<h1>COLOR</h1>
+<input type="color" [(ngModel)]="selectedColor" (change)="savePlayer()">
+
 <div class="card-container">
-    <lobby-card name="lobby1"></lobby-card>
-    <lobby-card name="lobby2"></lobby-card>
-    <lobby-card name="lobby3"></lobby-card>
+    <lobby-card *ngFor="let lobby of lobbies" [name]="lobby.name" [id]="lobby.id"></lobby-card>
 </div>

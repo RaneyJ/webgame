@@ -1,0 +1,14 @@
+<div style="padding: 16px;"></div>
+<div class="points-display">
+    Points: {{ points }}
+</div>
+<div class="map">
+    <div [ngStyle]="{
+        'transform': 'scale(' + zoomLevel + ')',
+        'transform-origin': '0 0',
+        'margin-left': offsetX + 'px',
+        'margin-top': offsetY + 'px'
+      }">
+        <canvas #gameCanvas></canvas>
+    </div>
+</div>
