@@ -12,7 +12,7 @@ export class WebSocketService {
 
   constructor() {
     // Create the WebSocket connection
-    this.socket = new WebSocket('https://tame-toes-tell.loca.lt'); // Replace with your WebSocket server URL
+    this.socket = new WebSocket('http://3.133.133.97:8080'); // Replace with your WebSocket server URL
 
     // Connection open promise
     this.connectionPromise = new Promise((resolve, reject) => {
