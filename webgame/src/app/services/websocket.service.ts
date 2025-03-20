@@ -12,7 +12,7 @@ export class WebSocketService {
 
   constructor() {
     // Create the WebSocket connection
-    this.socket = new WebSocket('https://server.pixelplunder.net'); // Replace with your WebSocket server URL
+    this.socket = new WebSocket('wss://server.pixelplunder.net:443'); // Replace with your WebSocket server URL
 
     // Connection open promise
     this.connectionPromise = new Promise((resolve, reject) => {
